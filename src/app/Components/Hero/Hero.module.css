@@ -1,0 +1,16 @@
+@import url();
+
+.hero{
+    background-color: #0095e6;
+    width: 100vw;
+    height: 480px;
+    margin-top: 80px;
+}
+.trip{
+    font-family: "inter", sans-serif;
+}
+.forms{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
