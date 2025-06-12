@@ -32,7 +32,7 @@ function HotelForm() {
     const checkOut = e.target.checkOut.value;
     const passengers = e.target.passengers.value;
 
-    // Go to /hotels with query parameters
+    // Go to /hotels with query parameters  
     router.push(
     
     );
@@ -48,8 +48,8 @@ function HotelForm() {
             <FaLocationDot />
             <select>
             {
-              hotelDestination?.data?.map((eachItem) => (
-                  <option>{eachItem.region}</option>
+              hotelDestination?.data?.map((eachItem, index) => (
+                  <option key={index}>{eachItem.region}</option>
                 ))
             }
             </select>
