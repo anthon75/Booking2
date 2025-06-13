@@ -1,5 +1,5 @@
 "use client";
-import styles from "./hero.module.css";
+import styles from "./Hero.module.css";
 import React, { useState, useEffect } from "react";
 import { PiAirplaneTilt } from "react-icons/pi";
 import { LuHotel } from "react-icons/lu";

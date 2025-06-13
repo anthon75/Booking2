@@ -21,7 +21,7 @@ const navbar = () => {
           <button className='px-4 py-2 border-white border rounded hover:bg-white transition bg-blue-400 font-semibold '><a href="">Sign up</a></button>
           <button className='px-4 py-2 border-white border rounded hover:bg-white transition bg-blue-400 font-semibold '><a href="">Register</a></button>
         </div>
-       <div className='hidden'>
+       <div className='flex size-12'>
           <GiHamburgerMenu />
        </div>
       </div>

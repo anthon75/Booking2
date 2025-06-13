@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { getDestinationId, getSearchHotels } from "../components/api/fetch";
+import { getDestinationId, getSearchHotels } from "../Components/Utils/FetchData";
 import { useSearchParams } from "next/navigation";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 import { LiaDollarSignSolid } from "react-icons/lia";

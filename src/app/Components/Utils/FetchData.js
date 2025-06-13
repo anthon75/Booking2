@@ -17,7 +17,6 @@ export const getHotlDestination = async () => {
 
 } //the main function to fetch the data from the API
 
-
 const url = 'https://booking-com15.p.rapidapi.com/api/v1/flights/searchFlights?query=man'
 try {
 	const response = await fetch(url, options);
@@ -27,4 +26,12 @@ try {
 	console.error(error);
 }
 
+export const getDestinationId = () => {
+	
+}
+ 
 
+export const getSearchHotels = () => {
+
+}
+ 
