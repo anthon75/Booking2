@@ -8,11 +8,11 @@ import { LiaDollarSignSolid } from "react-icons/lia";
 import { IoLocationOutline } from "react-icons/io5";
 
 const HotelsPage = () => {
-  const searchParams = useSearchParams();
-  const destination = searchParams.get("destination");
-  const checkIn = searchParams.get("checkIn");
-  const checkOut = searchParams.get("checkOut");
-  const passengers = searchParams.get("passengers");
+  // const searchParams = useSearchParams();
+  // const destination = searchParams.get("destination");
+  // const checkIn = searchParams.get("checkIn");
+  // const checkOut = searchParams.get("checkOut");
+  // const passengers = searchParams.get("passengers");
 
   const [hotels, setHotels] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -21,42 +21,42 @@ const HotelsPage = () => {
   useEffect(() => {
     const fetchHotels = async () => {
       console.log("Search Params:", {
-        destination,
-        checkIn,
-        checkOut,
-        passengers,
+        // destination,
+        // checkIn,
+        // checkOut,
+        // passengers,
       });
 
-      if (!destination || !checkIn || !checkOut || !passengers) {
-        console.error("Missing required search parameters");
-        setLoading(false);
-        return;
-      }
+      // if (!destination || !checkIn || !checkOut || !passengers) {
+      //   console.error("Missing required search parameters");
+      //   setLoading(false);
+      //   return;
+      // }
 
       const destId = await getDestinationId(destination);
       console.log("Destination ID:", destId);
 
-      if (!destId) {
-        console.error("Invalid destination ID returned from API");
-        await fetchSuggestions(destination); // fallback suggestions
-        setLoading(false);
-        return;
-      }
+      // if (!destId) {
+      //   console.error("Invalid destination ID returned from API");
+      //   await fetchSuggestions(destination); 
+      //   setLoading(false);
+      //   return;
+      // }
 
       const hotelRes = await getSearchHotels(
-        destId,
-        checkIn,
-        checkOut,
-        passengers
+        // destId,
+        // checkIn,
+        // checkOut,
+        // passengers
       );
       const hotelsData = hotelRes?.data || [];
 
-      if (hotelsData.length === 0) {
-        await fetchSuggestions(destination); // fallback if no hotels
-      }
+      // if (hotelsData.length === 0) {
+      //   await fetchSuggestions(destination); 
+      // }
 
-      setHotels(hotelsData);
-      setLoading(false);
+      // setHotels(hotelsData);
+      // setLoading(false);
     };
 
     const fetchSuggestions = async (destination) => {
